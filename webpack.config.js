@@ -9,7 +9,14 @@ module.exports = {
     contentBase: path.join(__dirname, "dist"),
     compress: true,
     port: 9000,
-    historyApiFallback: true //navigation
+    historyApiFallback: true, //navigation
+    proxy: [
+      {
+        context: () => true,
+        target: "http://localhost:3000",
+        secure: false
+      }
+    ]
   },
 
   devtool: "cheap-eval-source-map", //fast build, super fast rebuilds

@@ -1,1 +1,14 @@
-//Filler file
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/test', {useNewUrlParser: true});
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  console.log('we are connected!')
+});
+
+const kittySchema = new mongoose.Schema({
+  name: String
+});
+
+const Kitten = mongoose.model('Kitten', kittySchema);
+

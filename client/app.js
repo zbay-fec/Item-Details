@@ -1,6 +1,6 @@
 import React from "react";
 
-class App extends React.Component {
+class ItemDetail extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -8,4 +8,4 @@ class App extends React.Component {
     return <h1>Lets Get Started Baby</h1>;
   }
 }
-export default App;
+export default ItemDetail;

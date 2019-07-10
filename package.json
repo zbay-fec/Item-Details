@@ -7,7 +7,7 @@
     "watch": "rimraf dist && webpack --watch",
     "start": "webpack-dev-server  --open --color ",
     "build": "rimraf dist &&  webpack --progress --profile",
-    "server": "nodemon server/server.js",
+    "server": "npx nodemon server/server.js",
     "server-prod": "node server/server.js"
   },
   "repository": {
@@ -20,6 +20,7 @@
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
+    "mongodb": "^3.2.7",
     "mongoose": "^5.6.3",
     "npm": "^6.10.0",
     "react": "^16.3.2",
@@ -62,6 +63,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "css-loader": "^0.28.11",
+    "dotenv": "^8.0.0",
     "file-loader": "^1.1.11",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",

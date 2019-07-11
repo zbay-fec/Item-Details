@@ -13,7 +13,7 @@ class ItemDetail extends React.Component {
       images : [],
       item : {
         data: {
-          ID: "CSB996n",
+          ID: "FBV587t",
           Condition: '',
         }
       }
@@ -22,6 +22,7 @@ class ItemDetail extends React.Component {
     this.onMouseOver = this.onMouseOver.bind(this);
     this.handleMouseOver = this.handleMouseOver.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.handleBackGround = this.handleBackGround.bind(this);
   }
 
   handleClick (e) {
@@ -52,28 +53,48 @@ class ItemDetail extends React.Component {
     this.setState({side : e.target.src});
   }
 
+  handleBackGround(link) {
+    if(link === this.state.main){
+      return 'main';
+    }else if(link === this.state.side && this.state.toggle){
+      return 'side';
+    }else{
+      return 'reg';
+    }
+  }
+
   componentDidMount () {
     axios.get(`/item/${this.state.item.data.ID}`)
       .then(results => {
         this.setState({item : results});
         this.setState({images : this.image()});
-        this.setState({main : this.state.images[0]})
+        this.setState({main : this.state.images[0]});
       }
     )
   }
 
   render () {
     return (
-    <div>
-    <h1>{this.state.item.data['Name']}</h1>
-      <Sidebar images={this.state.images} mouse={this.onMouseOver} handle={this.handleMouseOver} click={this.handleClick}/>
-      <Image image={this.state.main} side={this.state.side} toggle={this.state.toggle}/>
-      <h5>Condition: {this.state.item.data.Condition}</h5>
-      <h5>Quantity: <input type='text' size='4'></input></h5>
-      <h5>Price: {this.state.item.data.Price}</h5>
-      <h3>Seller Information</h3>
-      <h5>{this.state.item.data['Seller Name']} {this.state.item.data['Seller Score']}</h5>
-      <h5>{this.state.item.data['Seller Feedback']}% Positive Feedback</h5>
+    <div className='parent grid-parent'>
+      <div id='sidebar'>
+        <Sidebar images={this.state.images} mouse={this.onMouseOver} handle={this.handleMouseOver}
+        click={this.handleClick} background={this.handleBackGround}/>
+      </div>
+      <div id='image'>
+        <Image image={this.state.main} side={this.state.side} toggle={this.state.toggle}/>
+        <span><p id="sale"><i>$</i><b> Have one to sell?</b><button type="button">Sell now</button></p></span>
+      </div>
+      <div>
+        <h1 id='title'>{this.state.item.data['Name']}</h1>
+        <h5><div className='fixed'>Condition: {this.state.item.data.Condition}</div></h5>
+        <h5><div className='fixed'>Quantity: <input type='text' size='4'></input></div></h5>
+        <h5>Price: {this.state.item.data.Price}</h5>
+      </div>
+      <div id='seller'>
+        <h3>Seller Information</h3>
+        <h5>{this.state.item.data['Seller Name']} {this.state.item.data['Seller Score']}</h5>
+        <h5>{this.state.item.data['Seller Feedback']}% Positive Feedback</h5>
+      </div>
     </div>
     )
   }

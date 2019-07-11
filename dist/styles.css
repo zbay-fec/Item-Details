@@ -1,0 +1,82 @@
+body {
+  background-color: rgb(248, 248, 248);
+  font-family: "Helvetica neue",Helvetica,Verdana,Sans-serif;
+}
+.grid-parent {
+  display: inline-flex;
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: 700;
+}
+.fixed {
+  font-weight: normal;
+  font-size: small;
+  color: #636363;
+  text-align: right;
+  margin-right: 7px;
+  width: 140px;
+}
+.sidepic {
+  margin: 0px 15px 10px 0px;
+}
+.main {
+  border: 1px solid grey;
+  margin-right: 10px;
+}
+#sidebar {
+  float: left;
+}
+
+#image {
+  float: left;
+}
+
+button {
+  color: #0654ba;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 3px;
+  padding: 7px 13px;
+  margin-left: 4px;
+}
+
+i{
+  color: rgb(40, 143, 40);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#sale {
+  margin-top: 7px;
+  padding-top: 20px;
+  height: 33px;
+  width: 320px;
+  border-top: 1px dotted rgb(204, 204, 204);
+  text-align: center;
+  font-weight: 400;
+  font-size: 13px;
+  position: fixed;
+  left: 90px;
+}
+
+#main {
+  border: 3px solid rgb(133, 133, 255);
+}
+
+#side{
+  border: 2px solid rgb(133, 133, 255);
+}
+
+#reg{
+  border: 2px solid grey;
+}
+
+#title{
+  float: left;
+  border-bottom: 1px dotted grey;
+  padding-bottom: 10px;
+  margin-left: 20px;
+  margin-top: 5px;
+}

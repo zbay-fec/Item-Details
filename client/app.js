@@ -86,7 +86,7 @@ class ItemDetail extends React.Component {
       </div>
       <div>
         <h1 id='title'>{this.state.item.data['Name']}</h1>
-        <h5><div className='fixed'>Condition: {this.state.item.data.Condition}</div></h5>
+        <h5><div className='fixed'>Condition: <b>{this.state.item.data.Condition}</b></div></h5>
         <h5><div className='fixed'>Quantity: <input type='text' size='4'></input></div></h5>
         <h5>Price: {this.state.item.data.Price}</h5>
       </div>

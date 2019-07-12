@@ -17,13 +17,19 @@ h1 {
   font-size: 18px;
   font-weight: 700;
 }
+h5 {
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
 .fixed {
+  display: inline-block;
+  text-align: right;
   font-weight: normal;
   font-size: small;
   color: #636363;
-  text-align: right;
-  margin-right: 7px;
-  width: 140px;
+  margin-right: 12px;
+  width: 100px;
 }
 .sidepic {
   margin: 0px 15px 10px 0px;
@@ -31,6 +37,9 @@ h1 {
 .main {
   border: 1px solid grey;
   margin-right: 10px;
+}
+.titlecol{
+  display: inline-block;
 }
 #sidebar {
   float: left;
@@ -47,6 +56,7 @@ button {
   border-radius: 3px;
   padding: 7px 13px;
   margin-left: 4px;
+  box-shadow: 0 3px 0 rgba(0,0,0,0.04);
 }
 
 i{
@@ -87,7 +97,26 @@ i{
   margin-left: 20px;
   margin-top: 5px;
 }
-
+#priceblock{
+  margin-top: 20px;
+  background-color: #e2e2e2;
+  margin-left: 15px;
+  width: 422px;
+  height: 177px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-shadow: 4px 4px 1px #eee;
+}
+#dollarval{
+  font-size: 16px;
+  font-weight: 700;
+  position: relative;
+  top: 12px;
+}
+#price{
+  position: relative;
+  top: 12px;
+}
 b{
   color: black;
 }

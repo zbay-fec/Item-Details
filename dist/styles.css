@@ -2,6 +2,10 @@ body {
   background-color: rgb(248, 248, 248);
   font-family: "Helvetica neue",Helvetica,Verdana,Sans-serif;
 }
+
+a:visited{
+  color: blue;
+}
 .grid-parent {
   display: inline-flex;
 }
@@ -17,9 +21,37 @@ h1 {
   font-size: 18px;
   font-weight: 700;
 }
+
+h2 {
+  font-size: 15px;
+  color: #333;
+  font-weight: 500;
+  line-height: 18px;
+  margin-left: 0;
+  margin-top: 0;
+}
+
 h5 {
   margin-top: 7px;
   margin-bottom: 7px;
+}
+
+h6{
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.16px;
+  color: #333;
+  margin-bottom: 4px;
+  font-weight: normal;
+  margin-top: 0px;
+}
+
+#learnmore{
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: -0.15px;
+  color: #767676;
+  margin-top: 8px;
 }
 
 .fixed {
@@ -30,17 +62,57 @@ h5 {
   color: #636363;
   margin-right: 12px;
   width: 100px;
+  margin-top: 10px;
 }
 .sidepic {
-  margin: 0px 15px 10px 0px;
+  margin: 0px 10px 5px 0px;
 }
 .main {
   border: 1px solid grey;
   margin-right: 10px;
 }
+
 .titlecol{
   display: inline-block;
 }
+
+#table{
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  height: 37px;
+}
+
+.tablecolumn{
+  height: 37px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-left: 1px solid #e2e2e2;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.center {
+  margin: 0;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.buttons{
+  
+  position: relative;
+  left: 80px;
+  display: flex;
+  justify-content: center;
+}
+
 #sidebar {
   float: left;
 }
@@ -69,25 +141,22 @@ i{
   margin-top: 7px;
   padding-top: 20px;
   height: 33px;
-  width: 320px;
   border-top: 1px dotted rgb(204, 204, 204);
   text-align: center;
   font-weight: 400;
   font-size: 13px;
-  position: fixed;
-  left: 90px;
 }
 
 #main {
-  border: 3px solid rgb(133, 133, 255);
-}
-
-#side{
   border: 2px solid rgb(133, 133, 255);
 }
 
+#side{
+  border: 1px solid rgb(133, 133, 255);
+}
+
 #reg{
-  border: 2px solid grey;
+  border: 1px solid grey;
 }
 
 #title{
@@ -95,28 +164,250 @@ i{
   border-bottom: 1px dotted grey;
   padding-bottom: 10px;
   margin-left: 20px;
+  margin-right: 20px;
   margin-top: 5px;
+  margin-bottom: 0px;
 }
+
 #priceblock{
-  margin-top: 20px;
+  min-width: 360px;
+  margin-top: 15px;
   background-color: #e2e2e2;
-  margin-left: 15px;
-  width: 422px;
-  height: 177px;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 184px;
   border: 1px solid #ddd;
   border-radius: 3px;
   box-shadow: 4px 4px 1px #eee;
 }
+
 #dollarval{
   font-size: 16px;
   font-weight: 700;
   position: relative;
   top: 12px;
 }
+
 #price{
   position: relative;
+  width: 85px;
   top: 12px;
 }
+
+#buttons{
+  position: relative;
+  bottom: 10px;
+}
+
+#buyitbutton{
+  margin-bottom: 10px;
+  background-image: linear-gradient(#0079bc,#00509d);
+  color: white;
+  width: 139px;
+  height: 34px;
+  font-size: 16px;
+}
+
+#additbutton{
+  margin-bottom: 10px;
+  background-image: linear-gradient(#45aad6,#2386c0);
+  color: white;
+  width: 139px;
+  height: 34px;
+  font-size: 16px;
+}
+
+#heart{
+  color : #0654ba;
+  font-size: 14px;
+}
+
+#watchitbutton{
+  margin-bottom: 10px;
+  background-color: white;
+  color: #0654ba;
+  width: 140px;
+  height: 32px;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 7px;
+}
+
+#col1{
+  color: #dd1e31;
+  font-weight: bold;
+}
+
 b{
   color: black;
+}
+
+#sellconfidence{
+  width: 261px;
+  height: 83px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  color: #333;
+  line-height: 18px;
+  padding: 14px 21px 20px 16px;
+  margin-bottom: 10px;
+}
+
+#sellinfo{
+  height: 168px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 261px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  color: #333;
+  line-height: 18px;
+  padding: 14px 21px 20px 16px;
+}
+
+#truck{
+  width: 18px;
+  height: 18px;
+}
+
+#shipping{
+  vertical-align: text-top;
+}
+
+#payments{
+  vertical-align: text-top;
+}
+
+#table2{
+  display: table;
+  height: 62px;
+  width: 261px;
+}
+
+#moneypic{
+  display: table-cell;
+  vertical-align: middle;
+  padding-bottom: 20px;
+}
+
+.moneypic{
+  width: 42px;
+  height: 42px;
+}
+
+#sidemoney{
+  width: 200px !important;
+  display: table-cell;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+#sellerinfotitle{
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#sellerpercent{
+  font-size: 12px;
+  padding-bottom: 10px;
+  border-bottom: 2px dotted #999;
+}
+
+#sellername{
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration-line: none !important;
+}
+
+.sellinfolinks{
+  margin-top: 5px;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgb(10, 61, 171);
+  margin-bottom: 0px;
+}
+
+#heart2{
+  position: relative;
+  top: 5px;
+  margin-top: 5px;
+  margin-right: 5px;
+  font-size: 20px;
+  font-weight: 400;
+  color: rgb(10, 61, 171);
+}
+
+#a{
+  color: green;
+  font-weight: 400;
+  font-size: 13px;
+  top: 2px;
+  left: 2px;
+}
+
+#b{
+  font-weight: 400;
+  font-size: 13px;
+  top: 2px;
+  left: 2px;
+}
+
+#c{
+  color: green;
+  font-weight: 500;
+  font-size: 13px;
+  top: 2px;
+  left: 2px;
+}
+
+#d{
+  color: black;
+  font-weight: 300;
+  font-size: 11px;
+}
+
+#e{
+  font-size: 10px;
+  font-weight: 400;
+  color: rgb(102, 102, 102)
+}
+
+#f{
+  font-size: 10px;
+  font-weight: 400;
+  color: rgb(102, 102, 102)
+}
+
+#g{
+  font-size: 10px;
+  font-weight: 400;
+  color: rgb(102, 102, 102);
+}
+
+#h{
+  font-size: 11px;
+  font-weight: 400;
+}
+
+#i{
+  font-size: 11px;
+  font-weight: 400;
+  color: rgb(102, 102, 102);
+  text-decoration: underline;
+}
+
+#j{
+  font-weight: 400;
+  font-size: 13px;
+}
+
+#k{
+  font-size: 11px;
+  font-weight: 400;
+  color: rgb(102, 102, 102);
+  text-decoration: underline;
 }

@@ -20,7 +20,7 @@ app.use(
 );
 app.use(cors());
 
-app.get("http://ec2-52-15-148-19.us-east-2.compute.amazonaws.com:3002/item/:id", (req, res, next) => {
+app.get("/item/:id", (req, res, next) => {
   Item.findOne({ID : req.params.id})
     .exec()
     .then(doc => {

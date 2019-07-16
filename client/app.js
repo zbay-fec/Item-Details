@@ -77,6 +77,10 @@ class ItemDetail extends React.Component {
         window.addEventListener('productChanged', e => this.setState({item : {data : {ID : e.detail.id}}}));
       }
     )
+    .catch(err => {
+      console.log(err);
+    }
+    )
   }
 
   render () {

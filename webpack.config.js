@@ -45,17 +45,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [
-          { loader: MiniCssExtractPlugin.loader },
-          {
-            loader: "css-loader",
-
-            options: {
-              minimize: true,
-              sourceMap: true
-            }
-          }
-        ]
+        use: ["style-loader", "css-loader"]
       },
       {
         test: /\.(html)$/,
@@ -86,11 +76,6 @@ module.exports = {
       template: __dirname + "/client/index.html", //create index.html with js script
       inject: "body",
       filename: "index.html"
-    }),
-    new MiniCssExtractPlugin({
-      //minify that css
-      filename: "[name]-[hash].css",
-      chunkFilename: "[id][hash].css"
     }),
     new UglifyJsPlugin({ sourceMap: true }) //smash everything
   ],

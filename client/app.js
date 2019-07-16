@@ -74,7 +74,7 @@ class ItemDetail extends React.Component {
         this.setState({item : results});
         this.setState({images : this.image()});
         this.setState({main : this.state.images[0]});
-        window.addEventListener('productChanged', e => this.setState({productId: e.detail.id}));
+        window.addEventListener('productChanged', e => this.setState({item : {data : {ID : e.detail.id}}}));
       }
     )
   }

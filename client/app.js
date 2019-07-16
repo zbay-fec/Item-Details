@@ -83,6 +83,21 @@ class ItemDetail extends React.Component {
     )
   }
 
+  componentDidUpdate () {
+    axios.get(`http://ec2-52-15-148-19.us-east-2.compute.amazonaws.com/item/${this.state.item.data.ID}`)
+    .then(results => {
+      this.setState({item : results});
+      this.setState({images : this.image()});
+      this.setState({main : this.state.images[0]});
+      window.addEventListener('productChanged', e => this.setState({item : {data : {ID : e.detail.id}}}));
+    }
+  )
+    .catch(err => {
+      console.log(err);
+    }
+    )
+  }
+
   render () {
     return (
     <div className='parent grid-parent'>

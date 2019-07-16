@@ -1,4 +1,4 @@
 import ItemDetail from "./app.js";
-import '../dist/styles.css';
+import '../client/styles.css';
 
 window.ItemDetail = ItemDetail;

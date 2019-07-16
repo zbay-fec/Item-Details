@@ -8,7 +8,9 @@
     "start": "webpack-dev-server  --open --color ",
     "build": "rimraf dist &&  webpack --progress --profile",
     "server": "npx nodemon server/server.js",
-    "server-prod": "node server/server.js"
+    "server-prod": "node server/server.js",
+    "restart": "pm2 startOrRestart ecosystem.config.js",
+    "deploy": "pm2 deploy ecosystem.config.js production"
   },
   "repository": {
     "type": "git",

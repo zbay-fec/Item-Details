@@ -24,6 +24,8 @@ class ItemDetail extends React.Component {
     this.handleMouseOver = this.handleMouseOver.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.handleBackGround = this.handleBackGround.bind(this);
+    this.handleQuantity = this.handleQuantity.bind(this);
+    this.handleCart = this.handleCart.bind(this);
   }
 
   handleClick (e) {
@@ -65,7 +67,16 @@ class ItemDetail extends React.Component {
   }
 
   handleQuantity(e) {
-    console.log(e.target.value);
+    this.setState({quantity: e.target.value})
+  }
+
+  handleCart() {
+    window.dispatchEvent(new CustomEvent('itemBought', {
+      detail: {
+        qty: this.state.quantity,
+        id: this.state.item.data.ID
+      }
+    }));
   }
 
   componentDidMount () {
@@ -114,12 +125,12 @@ class ItemDetail extends React.Component {
       <div>
         <h1 id='title'>{this.state.item.data['Name']}</h1>
         <h5><div className='fixed'>Condition: </div><div className='titlecol'><b>{this.state.item.data.Condition}</b></div></h5>
-        <h5><div className='fixed'>Quantity:</div><div className='titlecol'><input type='text' size='4'></input></div></h5>
+        <h5><div className='fixed'>Quantity:</div><div className='titlecol'><input type='text' size='4' onKeyUp={this.handleQuantity}></input></div></h5>
         <h5 id='priceblock'>
           <div id='price'className='fixed'>Price: </div><div className='titlecol' id='dollarval'>US ${this.state.item.data.Price}</div>
           <div id='buttons'>
             <div className='buttons'><button id='buyitbutton'>Buy It Now</button></div>
-            <div className='buttons'><button id='additbutton'>Add to cart</button></div>
+            <div className='buttons'><button id='additbutton' onClick={this.handleCart}>Add to cart</button></div>
             <div className='buttons'><button id='watchitbutton'><i id='heart' className="material-icons">favorite_border</i>Add to watchlist</button></div>
           </div>
           <div id='table'>

@@ -116,85 +116,85 @@ class ItemDetail extends React.Component {
       return <div></div>;
     }else{
       return (
-      <div className='parent grid-parent'>
+      <div className='kgrid-parent'>
         <div id='sidebar'>
           <Sidebar images={this.state.images} mouse={this.onMouseOver} handle={this.handleMouseOver}
           click={this.handleClick} background={this.handleBackGround}/>
         </div>
         <div id='image'>
           <Image image={this.state.main} side={this.state.side} toggle={this.state.toggle}/>
-          <span><p id="sale"><i>$</i><b> Have one to sell?</b><button type="button">Sell now</button></p></span>
+          <span><p id="sale"><i>$</i><b className='kb'> Have one to sell?</b><button type="button">Sell now</button></p></span>
         </div>
         <div>
-          <h1 id='title'>{this.state.item.data['Name']}</h1>
-          <h5><div className='fixed'>Condition: </div><div className='titlecol'><b>{this.state.item.data.Condition}</b></div></h5>
-          <h5><div className='fixed'>Quantity:</div><div className='titlecol'><input type='text' size='4' onKeyUp={this.handleQuantity}></input></div></h5>
-          <h5 id='priceblock'>
-            <div id='price'className='fixed'>Price: </div><div className='titlecol' id='dollarval'>US ${this.state.item.data.Price}</div>
-            <div id='buttons'>
-              <div className='buttons'><button id='buyitbutton'>Buy It Now</button></div>
-              <div className='buttons'><button id='additbutton' onClick={this.handleCart}>Add to cart</button></div>
-              <div className='buttons'><button id='watchitbutton'><i id='heart' className="material-icons">favorite_border</i>Add to watchlist</button></div>
+          <h1 className='kh1' id='title'>{this.state.item.data['Name']}</h1>
+          <h5 className='kh5'><div className='kfixed'>Condition: </div><div className='ktitlecol'><b className='kb'>{this.state.item.data.Condition}</b></div></h5>
+          <h5 className='kh5'><div className='kfixed'>Quantity:</div><div className='ktitlecol'><input type='text' size='4' id='kinput' onKeyUp={this.handleQuantity}></input></div></h5>
+          <h5 id='priceblock' className='kh5'>
+            <div id='price'className='kfixed'>Price: </div><div className='ktitlecol' id='dollarval'>US ${this.state.item.data.Price}</div>
+            <div id='kbuttons'>
+              <div className='kbuttons'><button id='kbuyitbutton'>Buy It Now</button></div>
+              <div className='kbuttons'><button id='kadditbutton' onClick={this.handleCart}>Add to cart</button></div>
+              <div className='kbuttons'><button id='kwatchitbutton'><i id='kheart' className="material-icons">favorite_border</i>Add to watchlist</button></div>
             </div>
-            <div id='table'>
-              <div className='tablecolumn' id='col1'>
-                <div className='center'>
+            <div id='ktable'>
+              <div className='ktablecolumn' id='kcol1'>
+                <div className='kcenter'>
                 100% buyer satisfaction
                 </div>
               </div>
-              <div className='tablecolumn' id='col2'>
-                <div className='center'>
+              <div className='ktablecolumn' id='col2'>
+                <div className='kcenter'>
                 Free delivery in 2 days
                 </div></div>
-              <div className='tablecolumn' id='col3'>
-                <div className='center'>
+              <div className='ktablecolumn' id='col3'>
+                <div className='kcenter'>
                 More than 95% sold
                 </div></div>
             </div>
           </h5>
-          <h5><div className='fixed'>Shipping: </div>
-            <div className='titlecol' id='shipping'>
-              <div><span><img id='truck' src='https://zbay-food.s3.us-east-2.amazonaws.com/Payment+Types/xmyxg1ubry1npie2zlpan5za3yu.png'></img></span><span id='a'>FAST 'N FREE</span></div>
-              <div><span id='b'>Guaranteed by</span><span id='c'> Wed. Jul. 17 </span> <span id='d'><a href=''>| See details</a></span></div>
-              <div id='e'>Item location: US, United States</div>
-              <div><span id='f'>Ships to: United States</span><span id='g'> | <a href=''>See exclusions</a></span></div>
+          <h5 className='kh2'><div className='kfixed'>Shipping: </div>
+            <div className='ktitlecol' id='kshipping'>
+              <div><span><img id='ktruck' src='https://zbay-food.s3.us-east-2.amazonaws.com/Payment+Types/xmyxg1ubry1npie2zlpan5za3yu.png'></img></span><span id='ka'>FAST 'N FREE</span></div>
+              <div><span id='kb'>Guaranteed by</span><span id='kc'> Wed. Jul. 17 </span> <span id='kd'><a href=''>| See details</a></span></div>
+              <div id='ke'>Item location: US, United States</div>
+              <div><span id='kf'>Ships to: United States</span><span id='kg'> | <a href=''>See exclusions</a></span></div>
             </div>
           </h5>
-          <h5><div className='fixed'>Payments:</div>
-            <div className='titlecol' id='payments'>
+          <h5 className='kh2'><div className='kfixed'>Payments:</div>
+            <div className='ktitlecol' id='kpayments'>
               <span><img src='https://zbay-food.s3.us-east-2.amazonaws.com/Payment+Types/paypal.png'></img></span>
               <span><img src='https://zbay-food.s3.us-east-2.amazonaws.com/Payment+Types/credit_cards.png'></img></span>
               <div><img src='https://zbay-food.s3.us-east-2.amazonaws.com/Payment+Types/logoPaypalCredit_104x16.png'></img></div>
-              <div><span id='h'>Special financing available.    </span><span id='i'>Apply Now   |  See terms</span></div>
+              <div><span id='kh'>Special financing available.    </span><span id='ki'>Apply Now   |  See terms</span></div>
             </div>
           </h5>
-          <h5><div className='fixed'>Returns:</div>
-            <div className='titlecol'>
-              <span id='j'>30 day returns. Buyer pays for return shipping |</span> <span id='k'>See details</span>
+          <h5 className='kh2'><div className='kfixed'>Returns:</div>
+            <div className='ktitlecol'>
+              <span id='kj'>30 day returns. Buyer pays for return shipping |</span> <span id='kk'>See details</span>
             </div>
           </h5>
         </div>
         <div id='seller'>
-          <div id='sellconfidence'>
-            <h2>Shop with confidence</h2>
-            <div id='table2'>
-              <div className='moneypic' id='moneypic'>
-                <img className='moneypic' src='https://zbay-food.s3.us-east-2.amazonaws.com/Payment+Types/Screen+Shot+2019-07-13+at+8.34.01+PM.png'></img>
+          <div id='ksellconfidence'>
+            <h2 className='kh2'>Shop with confidence</h2>
+            <div id='ktable2'>
+              <div className='kmoneypic' id='kmoneypic'>
+                <img className='kmoneypic' src='https://zbay-food.s3.us-east-2.amazonaws.com/Payment+Types/Screen+Shot+2019-07-13+at+8.34.01+PM.png'></img>
               </div>
-              <div id='sidemoney'>
-                <h6>ZBay Money Back Guarantee</h6>
-                <p id='learnmore'>Get the item you ordered or get your money back. <a href=''>Learn more</a></p>
+              <div id='ksidemoney'>
+                <h6 className='kh6'>ZBay Money Back Guarantee</h6>
+                <p id='klearnmore'>Get the item you ordered or get your money back. <a href=''>Learn more</a></p>
               </div>
             </div>
           </div>
-          <div id='sellinfo'>
-            <h2 id='sellerinfotitle'>Seller Information</h2>
-            <h6 id='sellername'><a href=''>{this.state.item.data['Seller Name']}</a> (<a href=''>{this.state.item.data['Seller Score']}</a>)</h6>
-            <h6 id='sellerpercent'>{this.state.item.data['Seller Feedback']}% Positive Feedback</h6>
-              <p className='sellinfolinks'><a href=''><i id='heart2' className="material-icons">favorite_border</i>Save this Seller</a></p>
-              <p className='sellinfolinks'><a href=''>Contact seller</a></p>
-              <p className='sellinfolinks'><a href=''>Visit store</a></p>
-              <p className='sellinfolinks'><a href=''>See other items</a></p>
+          <div id='ksellinfo'>
+            <h2 className='kh2' id='ksellerinfotitle'>Seller Information</h2>
+            <h6 className='kh6' id='ksellername'><a href=''>{this.state.item.data['Seller Name']}</a> (<a href=''>{this.state.item.data['Seller Score']}</a>)</h6>
+            <h6 className='kh6' id='ksellerpercent'>{this.state.item.data['Seller Feedback']}% Positive Feedback</h6>
+              <p className='ksellinfolinks'><a href=''><i id='kheart2' className="material-icons">favorite_border</i>Save this Seller</a></p>
+              <p className='ksellinfolinks'><a href=''>Contact seller</a></p>
+              <p className='ksellinfolinks'><a href=''>Visit store</a></p>
+              <p className='ksellinfolinks'><a href=''>See other items</a></p>
           </div>
         </div>
       </div>

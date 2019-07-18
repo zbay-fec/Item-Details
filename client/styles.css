@@ -6,23 +6,24 @@ body {
 a:visited{
   color: blue;
 }
-.grid-parent {
+
+.kgrid-parent {
   display: inline-flex;
 }
 
-input {
+#kinput {
   border-radius: 4px;
   box-shadow: none;
   border: 1px solid #999;
   padding: 6px;
 }
 
-h1 {
+.kh1 {
   font-size: 18px;
   font-weight: 700;
 }
 
-h2 {
+.kh2 {
   font-size: 15px;
   color: #333;
   font-weight: 500;
@@ -31,12 +32,12 @@ h2 {
   margin-top: 0;
 }
 
-h5 {
+.kh5 {
   margin-top: 7px;
   margin-bottom: 7px;
 }
 
-h6{
+.kh6{
   font-size: 14px;
   line-height: 16px;
   letter-spacing: -0.16px;
@@ -46,7 +47,7 @@ h6{
   margin-top: 0px;
 }
 
-#learnmore{
+#klearnmore{
   font-size: 13px;
   line-height: 16px;
   letter-spacing: -0.15px;
@@ -54,7 +55,7 @@ h6{
   margin-top: 8px;
 }
 
-.fixed {
+.kfixed {
   display: inline-block;
   text-align: right;
   font-weight: normal;
@@ -64,25 +65,25 @@ h6{
   width: 100px;
   margin-top: 10px;
 }
-.sidepic {
+.ksidepic {
   margin: 0px 10px 5px 0px;
 }
-.main {
+.kmain {
   border: 1px solid grey;
   margin-right: 10px;
 }
 
-.titlecol{
+.ktitlecol{
   display: inline-block;
 }
 
-#table{
+#ktable{
   display: grid;
   grid-template-columns: 33.33% 33.33% 33.33%;
   height: 37px;
 }
 
-.tablecolumn{
+.ktablecolumn{
   height: 37px;
   text-align: center;
   display: inline-block;
@@ -96,7 +97,7 @@ h6{
   text-align: center;
 }
 
-.center {
+.kcenter {
   margin: 0;
   position: relative;
   top: 50%;
@@ -105,7 +106,7 @@ h6{
   transform: translate(-50%, -50%);
 }
 
-.buttons{
+.kbuttons{
   
   position: relative;
   left: 80px;
@@ -194,12 +195,12 @@ i{
   top: 12px;
 }
 
-#buttons{
+#kbuttons{
   position: relative;
   bottom: 10px;
 }
 
-#buyitbutton{
+#kbuyitbutton{
   margin-bottom: 10px;
   background-image: linear-gradient(#0079bc,#00509d);
   color: white;
@@ -208,7 +209,7 @@ i{
   font-size: 16px;
 }
 
-#additbutton{
+#kadditbutton{
   margin-bottom: 10px;
   background-image: linear-gradient(#45aad6,#2386c0);
   color: white;
@@ -217,12 +218,12 @@ i{
   font-size: 16px;
 }
 
-#heart{
+#kheart{
   color : #0654ba;
   font-size: 14px;
 }
 
-#watchitbutton{
+#kwatchitbutton{
   margin-bottom: 10px;
   background-color: white;
   color: #0654ba;
@@ -234,16 +235,16 @@ i{
   padding: 7px;
 }
 
-#col1{
+#kcol1{
   color: #dd1e31;
   font-weight: bold;
 }
 
-b{
+.kb{
   color: black;
 }
 
-#sellconfidence{
+#ksellconfidence{
   width: 261px;
   height: 83px;
   background-color: #fff;
@@ -255,7 +256,7 @@ b{
   margin-bottom: 10px;
 }
 
-#sellinfo{
+#ksellinfo{
   height: 168px;
   font-size: 16px;
   font-weight: bold;
@@ -268,62 +269,62 @@ b{
   padding: 14px 21px 20px 16px;
 }
 
-#truck{
+#ktruck{
   width: 18px;
   height: 18px;
 }
 
-#shipping{
+#kshipping{
   vertical-align: text-top;
 }
 
-#payments{
+#kpayments{
   vertical-align: text-top;
 }
 
-#table2{
+#ktable2{
   display: table;
   height: 62px;
   width: 261px;
 }
 
-#moneypic{
+#kmoneypic{
   display: table-cell;
   vertical-align: middle;
   padding-bottom: 20px;
 }
 
-.moneypic{
+.kmoneypic{
   width: 42px;
   height: 42px;
 }
 
-#sidemoney{
+#ksidemoney{
   width: 200px !important;
   display: table-cell;
   vertical-align: middle;
   margin-right: 10px;
 }
 
-#sellerinfotitle{
+#ksellerinfotitle{
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-#sellerpercent{
+#ksellerpercent{
   font-size: 12px;
   padding-bottom: 10px;
   border-bottom: 2px dotted #999;
 }
 
-#sellername{
+#ksellername{
   font-size: 13px;
   font-weight: 700;
   text-decoration-line: none !important;
 }
 
-.sellinfolinks{
+.ksellinfolinks{
   margin-top: 5px;
   font-size: 13px;
   font-weight: 400;
@@ -331,7 +332,7 @@ b{
   margin-bottom: 0px;
 }
 
-#heart2{
+#kheart2{
   position: relative;
   top: 5px;
   margin-top: 5px;
@@ -341,7 +342,7 @@ b{
   color: rgb(10, 61, 171);
 }
 
-#a{
+#ka{
   color: green;
   font-weight: 400;
   font-size: 13px;
@@ -349,14 +350,14 @@ b{
   left: 2px;
 }
 
-#b{
+#kb{
   font-weight: 400;
   font-size: 13px;
   top: 2px;
   left: 2px;
 }
 
-#c{
+#kc{
   color: green;
   font-weight: 500;
   font-size: 13px;
@@ -364,48 +365,48 @@ b{
   left: 2px;
 }
 
-#d{
+#kd{
   color: black;
   font-weight: 300;
   font-size: 11px;
 }
 
-#e{
+#ke{
   font-size: 10px;
   font-weight: 400;
   color: rgb(102, 102, 102)
 }
 
-#f{
+#kf{
   font-size: 10px;
   font-weight: 400;
   color: rgb(102, 102, 102)
 }
 
-#g{
+#kg{
   font-size: 10px;
   font-weight: 400;
   color: rgb(102, 102, 102);
 }
 
-#h{
+#kh{
   font-size: 11px;
   font-weight: 400;
 }
 
-#i{
+#ki{
   font-size: 11px;
   font-weight: 400;
   color: rgb(102, 102, 102);
   text-decoration: underline;
 }
 
-#j{
+#kj{
   font-weight: 400;
   font-size: 13px;
 }
 
-#k{
+#kk{
   font-size: 11px;
   font-weight: 400;
   color: rgb(102, 102, 102);

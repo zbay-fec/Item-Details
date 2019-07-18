@@ -132,9 +132,9 @@ class ItemDetail extends React.Component {
           <h5 id='priceblock' className='kh5'>
             <div id='price'className='kfixed'>Price: </div><div className='ktitlecol' id='dollarval'>US ${this.state.item.data.Price}</div>
             <div id='kbuttons'>
-              <div className='kbuttons'><button id='kbuyitbutton'>Buy It Now</button></div>
-              <div className='kbuttons'><button id='kadditbutton' onClick={this.handleCart}>Add to cart</button></div>
-              <div className='kbuttons'><button id='kwatchitbutton'><i id='kheart' className="material-icons">favorite_border</i>Add to watchlist</button></div>
+              <div className='kbuttons'><button className='kbutton1' id='kbuyitbutton'>Buy It Now</button></div>
+              <div className='kbuttons'><button className='kbutton1' id='kadditbutton' onClick={this.handleCart}>Add to cart</button></div>
+              <div className='kbuttons'><button className='kbutton1' id='kwatchitbutton'><i id='kheart' className="material-icons">favorite_border</i>Add to watchlist</button></div>
             </div>
             <div id='ktable'>
               <div className='ktablecolumn' id='kcol1'>

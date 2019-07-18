@@ -80,7 +80,7 @@ class ItemDetail extends React.Component {
   }
 
   componentDidMount () {
-    axios.get(`http://ec2-52-15-148-19.us-east-2.compute.amazonaws.com/item/${this.state.item.data.ID}`)
+    axios.get(`http://ec2-52-15-148-19.us-east-2.compute.amazonaws.com:3002/item/${this.state.item.data.ID}`)
       .then(results => {
         this.setState({item : results});
         this.setState({images : this.image()});

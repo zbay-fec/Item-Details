@@ -7,7 +7,7 @@ class ItemDetail extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      quantity: 0,
+      quantity: 1,
       toggle : false,
       side : '',
       main : '',
@@ -77,6 +77,7 @@ class ItemDetail extends React.Component {
         id: this.state.item.data.ID
       }
     }));
+    this.setState({quantity : 1})
   }
 
   componentDidMount () {
@@ -128,7 +129,7 @@ class ItemDetail extends React.Component {
         <div>
           <h1 className='kh1' id='title'>{this.state.item.data['Name']}</h1>
           <h5 className='kh5'><div className='kfixed'>Condition: </div><div className='ktitlecol'><b className='kb'>{this.state.item.data.Condition}</b></div></h5>
-          <h5 className='kh5'><div className='kfixed'>Quantity:</div><div className='ktitlecol'><input type='text' size='4' id='kinput' onKeyUp={this.handleQuantity}></input></div></h5>
+          <h5 className='kh5'><div className='kfixed'>Quantity:</div><div className='ktitlecol'><input value={this.state.quantity} type='text' size='4' id='kinput' onChange={this.handleQuantity}></input></div></h5>
           <h5 id='priceblock' className='kh5'>
             <div id='price'className='kfixed'>Price: </div><div className='ktitlecol' id='dollarval'>US ${this.state.item.data.Price}</div>
             <div id='kbuttons'>
@@ -155,9 +156,9 @@ class ItemDetail extends React.Component {
           <h5 className='kh2'><div className='kfixed'>Shipping: </div>
             <div className='ktitlecol' id='kshipping'>
               <div><span><img id='ktruck' src='https://zbay-food.s3.us-east-2.amazonaws.com/Payment+Types/xmyxg1ubry1npie2zlpan5za3yu.png'></img></span><span id='ka'>FAST 'N FREE</span></div>
-              <div><span id='kb'>Guaranteed by</span><span id='kc'> Wed. Jul. 17 </span> <span id='kd'><a href='/'>| See details</a></span></div>
+              <div><span id='kb'>Guaranteed by</span><span id='kc'> Wed. Jul. 17 </span> <span id='kd'><a onClick={(e) => {e.preventDefault()}} href='/'>| See details</a></span></div>
               <div id='ke'>Item location: US, United States</div>
-              <div><span id='kf'>Ships to: United States</span><span id='kg'> | <a href='/'>See exclusions</a></span></div>
+              <div><span id='kf'>Ships to: United States</span><span id='kg'> | <a onClick={(e) => {e.preventDefault()}} href='/'>See exclusions</a></span></div>
             </div>
           </h5>
           <h5 className='kh2'><div className='kfixed'>Payments:</div>
@@ -183,18 +184,18 @@ class ItemDetail extends React.Component {
               </div>
               <div id='ksidemoney'>
                 <h6 className='kh6'>ZBay Money Back Guarantee</h6>
-                <p id='klearnmore'>Get the item you ordered or get your money back. <a href='/'>Learn more</a></p>
+                <p id='klearnmore'>Get the item you ordered or get your money back. <a onClick={(e) => {e.preventDefault()}} href='/'>Learn more</a></p>
               </div>
             </div>
           </div>
           <div id='ksellinfo'>
             <h2 className='kh2' id='ksellerinfotitle'>Seller Information</h2>
-            <h6 className='kh6' id='ksellername'><a href='/'>{this.state.item.data['Seller Name']}</a> (<a href='/'>{this.state.item.data['Seller Score']}</a>)</h6>
+            <h6 className='kh6' id='ksellername'><a onClick={(e) => {e.preventDefault()}} href='/'>{this.state.item.data['Seller Name']}</a> (<a onClick={(e) => {e.preventDefault()}} href='/'>{this.state.item.data['Seller Score']}</a>)</h6>
             <h6 className='kh6' id='ksellerpercent'>{this.state.item.data['Seller Feedback']}% Positive Feedback</h6>
-              <p className='ksellinfolinks'><a href='/'><i id='kheart2' className="material-icons">favorite_border</i>Save this Seller</a></p>
-              <p className='ksellinfolinks'><a href='/'>Contact seller</a></p>
-              <p className='ksellinfolinks'><a href='/'>Visit store</a></p>
-              <p className='ksellinfolinks'><a href='/'>See other items</a></p>
+              <p className='ksellinfolinks'><a onClick={(e) => {e.preventDefault()}} href='/'><i id='kheart2' className="material-icons">favorite_border</i>Save this Seller</a></p>
+              <p className='ksellinfolinks'><a onClick={(e) => {e.preventDefault()}} href='/'>Contact seller</a></p>
+              <p className='ksellinfolinks'><a onClick={(e) => {e.preventDefault()}} href='/'>Visit store</a></p>
+              <p className='ksellinfolinks'><a onClick={(e) => {e.preventDefault()}} href='/'>See other items</a></p>
           </div>
         </div>
       </div>

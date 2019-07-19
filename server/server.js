@@ -5,7 +5,6 @@ const app = express();
 const {Item} = require('../database/index.js');
 const mongoose = require("mongoose");
 const cors = require('cors');
-var compression = require('compression')
 require('dotenv').config();
 
 mongoose.connect(`mongodb+srv://${process.env.username}:${process.env.password}@zbay-tvguq.mongodb.net/Zbay?retryWrites=true&w=majority`, {useNewUrlParser: true});
@@ -20,7 +19,6 @@ app.use(
   })
 );
 app.use(cors());
-app.use(compression());
 
 app.get("/item/:id", (req, res, next) => {
   Item.findOne({ID : req.params.id})

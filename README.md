@@ -11,7 +11,7 @@
    * React - A Javascript library on the front end to handle the User-Interface.
    * Deployed using PM2, Nginx, and AWS EC2.
 ## Challenges
-   # First Deployed Web application.
+   * First Deployed Web application.
    * Using MongoDB for the first time. Learned how to query and interact with the database with Mongoose.
    * What did you learn?
 * Challenges that were unexpected

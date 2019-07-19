@@ -1,12 +1,18 @@
-#Item Details Component
-* Who are the contributors (names should link to their github or portfolio page)
-* What does the app do? 
-    * What problem does it solve? Who uses it?
-    * Why was it built?
-    * User Inputs and Outputs
-* Tech stack ( you can include logos)
-* Technical Challenges and research that you anticipated
-    * Why, what was the plan to overcome those challenges?
+# Item Details Component
+## Author
+    * Kevin Bench - https://github.com/kbench09
+## An Item Description designed to mimic Ebay 
+    * This is a component of a webpage designed with Service Oriented Architecture.
+    * This was build as a part of a larger group project during my time at Hack Reactor.
+    * Renders an item based on user selection, and allows users to add that item to the shopping cart for purchase.
+## Tech Stack
+    * Database - MongoDB hosted on MongDB Atlas Cloud platform
+    * Server - Express.js framework running on Node.js
+    * React - A Javascript library on the front end to handle the User-Interface.
+    * Deployed using PM2, Nginx, and AWS EC2.
+## Challenges
+    # First Deployed Web application.
+        * Using MongoDB for the first time. Learned how to query and interact with the database with Mongoose.
     * What did you learn?
 * Challenges that were unexpected
     * Why was it a challenge

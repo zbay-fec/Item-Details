@@ -96,7 +96,7 @@ class ItemDetail extends React.Component {
   }
 
   componentDidUpdate (prevProps, prevState) {
-    if(this.state.item.data.ID !== prevState.item.data.ID){
+    // if(this.state.item.data.ID !== prevState.item.data.ID){
       axios.get(`http://ec2-52-15-148-19.us-east-2.compute.amazonaws.com:3002/item/${this.state.item.data.ID}`)
       .then(results => {
         this.setState({item : results});
@@ -109,7 +109,7 @@ class ItemDetail extends React.Component {
         console.log(err);
       }
       )
-    }
+    // }
   }
 
   render () {

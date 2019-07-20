@@ -16,6 +16,7 @@ class ItemDetail extends React.Component {
         data: {
           ID: "AVR693z",
           Condition: '',
+          Price: '0'
         }
       }
     }

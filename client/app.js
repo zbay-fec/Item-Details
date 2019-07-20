@@ -12,13 +12,8 @@ class ItemDetail extends React.Component {
       side : '',
       main : '',
       images : [],
-      item : {
-        data: {
-          ID: "AVR693z",
-          Condition: '',
-          Price: '0'
-        }
-      }
+      ID : "AVR693z",
+      item : {}
     }
     this.image = this.image.bind(this);
     this.onMouseOver = this.onMouseOver.bind(this);
@@ -75,19 +70,19 @@ class ItemDetail extends React.Component {
     window.dispatchEvent(new CustomEvent('itemBought', {
       detail: {
         qty: this.state.quantity,
-        id: this.state.item.data.ID
+        id: this.state.ID
       }
     }));
     this.setState({quantity: 1})
   }
 
   componentDidMount () {
-    axios.get(`http://ec2-52-15-148-19.us-east-2.compute.amazonaws.com:3002/item/${this.state.item.data.ID}`)
+    axios.get(`http://ec2-52-15-148-19.us-east-2.compute.amazonaws.com:3002/item/${this.state.ID}`)
       .then(results => {
         this.setState({item : results});
         this.setState({images : this.image()});
         this.setState({main : this.state.images[0]});
-        window.addEventListener('productChanged', e => this.setState({item : {data : {ID : e.detail.id}}}));
+        window.addEventListener('productChanged', e => this.setState({ID : e.detail.id}));
       }
     )
     .catch(err => {
@@ -97,8 +92,8 @@ class ItemDetail extends React.Component {
   }
 
   componentDidUpdate (prevProps, prevState) {
-    if(this.state.item.data.ID !== prevState.item.data.ID){
-      axios.get(`http://ec2-52-15-148-19.us-east-2.compute.amazonaws.com:3002/item/${this.state.item.data.ID}`)
+    if(this.state.ID !== prevState.ID){
+      axios.get(`http://ec2-52-15-148-19.us-east-2.compute.amazonaws.com:3002/item/${this.state.ID}`)
       .then(results => {
         this.setState({item : results});
         this.setState({images : this.image()});

@@ -117,10 +117,6 @@ class ItemDetail extends React.Component {
       return <div></div>;
     }else{
       return (
-      <div>
-        <div class="alert alert-success">
-          <strong>Success!</strong> Indicates a successful or positive action.
-        </div>
       <div className='kgrid-parent'>
         <div id='sidebar'>
           <Sidebar images={this.state.images} mouse={this.onMouseOver} handle={this.handleMouseOver}
@@ -202,7 +198,6 @@ class ItemDetail extends React.Component {
               <p className='ksellinfolinks'><a onClick={(e) => {e.preventDefault()}} href='/'>See other items</a></p>
           </div>
         </div>
-      </div>
       </div>
       )
     }

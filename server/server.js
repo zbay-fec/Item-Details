@@ -34,6 +34,4 @@ app.get("/item/:id", (req, res, next) => {
     });
 });
 
-app.listen(port, host, () => {
-  console.log(`The shenanigans have started on aisle ${port}`);
-});
+module.exports = app;

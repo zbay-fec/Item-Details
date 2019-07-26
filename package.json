@@ -1,21 +1,17 @@
 {
-  "name": "webpack",
+  "name": "dbzbay-item-details",
   "version": "1.0.0",
-  "description": "A dope webpack boilerplate",
+  "description": "A microservice prodividing a product detail client and an API to serve its data",
   "main": "index.js",
   "scripts": {
-    "watch": "rimraf dist && webpack --watch",
-    "start": "webpack-dev-server  --open --color ",
-    "build": "rimraf dist &&  webpack --progress --profile",
-    "server": "nodemon server/index.js",
-    "server-prod": "node server/index.js",
-    "restart": "pm2 startOrRestart ecosystem.config.js",
-    "deploy": "pm2 deploy ecosystem.config.js production",
-    "test": "jest --forceExit"
+    "test": "jest --detectOpenHandles --forceExit",
+    "watch": "webpack --watch --mode=development",
+    "build": "webpack -p",
+    "start": "node server/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "none yet"
+    "url": ""
   },
   "author": "James Dempsey",
   "license": "UNLICENSED",

@@ -1,23 +1,19 @@
-const mongoose = require('mongoose');
-require('dotenv').config();
+require('dotenv').config()
+// const primise = require('util').Promise
 
-const itemSchema = mongoose.Schema({
-  _id: mongoose.Schema.Types.ObjectId,
-  'ID': String,
-  'Name': String,
-  'Price': String,
-  'Image 1': String,
-  'Image 2': String,
-  'Image 3': String,
-  'Image 4': String,
-  'Image 5': String,
-  'Seller Name': String,
-  'Seller Score': String,
-  'Seller Feedback': String,
-  'Condition': String,
-  'Category': String,
-});
+const { Pool, Client } = require('pg');
 
-const Item = mongoose.model('Item', itemSchema);
+const pool = new Pool();
 
-module.exports = {Item};
+module.exports = function(id){
+  if (isNaN(id) || id > 10000000){
+    return new Promise(() => 'not an id');
+  }
+  return pool.query('select * from products where id=$1', [Number(id)])
+  .then(res => res.rows[0])
+  .catch(err => {
+    console.log(err);
+    console.error(err)
+  });
+}
+

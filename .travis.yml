@@ -3,6 +3,8 @@ node_js:
   - "stable"
 services: 
   docker
+before_script:
+  psql -d dbzbay -a -f init.sql  
 
 cache:
   directories

@@ -3,9 +3,10 @@ services:
   db:
     image: postgres
     environment:
-      PGUSER: postgres
-      PGPASSWORD: imsotired2099
-      PGPORT: 5432
+      - PGUSER
+      - PGPASSWORD
+      - PGPORT
+      - PGDATABASE
     volumes:
       - $HOME/docker/volumes/postgres:/var/lib/postgresql/data
       - /var/run/postgresql:/var/run/postgresql
@@ -17,9 +18,11 @@ services:
     depends_on:
       - db
     environment:
-      PGUSER: postgres
-      PGPASSWORD: imsotired2099
-      PGHOST: db
+      - PGHOST=db
+      - PGUSER
+      - PGPASSWORD
+      - PGPORT
+      - PGDATABASE
     ports:
       - "80:5000"
     command: npm start

@@ -16,7 +16,7 @@ app.get("/item/:id", (req, res, next) => {
   const id = Number(req.params.id)
   if (isNaN(id)) next();
   else {
-    return Product(id)
+    return Product.get(id)
       .then(data => {
         res.send(data);
       })

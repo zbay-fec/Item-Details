@@ -1,0 +1,2 @@
+CREATE USER travis;
+CREATE DATABASE dbzbay;

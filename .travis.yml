@@ -10,3 +10,5 @@ cache:
 
 env:
   - DOCKER_COMPOSE_
+  - PGUSER=travis
+  - PGPASSWORD=travis

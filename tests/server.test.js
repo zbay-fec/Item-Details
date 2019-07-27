@@ -1,5 +1,6 @@
 const request = require('supertest');
 const app = require('../server/server.js');
+const Product = require('../database/index.js');
 
 
 describe('the /item/:id endpoint', () => {

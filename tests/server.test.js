@@ -43,7 +43,7 @@ describe('the /item/:id endpoint', () => {
         done()
       })
   });
-  if (process.env.env !== 'travis'){
+  if (process.env.ENV !== 'travis'){
     test('responds appropriately to unknown ids', done => {
       return request(app).get(`/item/not_an_id`)
         .expect(404)

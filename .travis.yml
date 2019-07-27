@@ -14,3 +14,5 @@ env:
   - DOCKER_COMPOSE_
   - PGUSER=travis
   - PGPASSWORD=travis
+  - PGDATABASE=dbzbay
+  - ENV=travis

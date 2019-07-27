@@ -3,13 +3,26 @@ services:
   db:
     image: postgres
     environment:
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_USER: postgres
-      POSTGRES_DB: DBZbay
+      PGUSER: postgres
+      PGPASSWORD: imsotired2099
+      PGPORT: 5432
     volumes:
-      - ./pgdata:/var/lib/postgres/data
+      - $HOME/docker/volumes/postgres:/var/lib/postgresql/data
+      - /var/run/postgresql:/var/run/postgresql
     ports:
       - '5432:5432'
   web:
-    
-      
+    build: .
+    image: zonagilreath/dbzbay
+    depends_on:
+      - db
+    environment:
+      PGUSER: postgres
+      PGPASSWORD: imsotired2099
+      PGHOST: db
+    ports:
+      - "80:5000"
+    command: npm start
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node-modules

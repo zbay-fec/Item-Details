@@ -7,6 +7,11 @@ describe('the /item/:id endpoint', () => {
   // afterEach(async (done) => {
   //   setImmediate(done);
   // });
+  // 
+  afterAll(async done =>{
+    await Product.pool.end();
+    done();
+  });
 
   test('responds with json', done => {
     let id;

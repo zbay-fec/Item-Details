@@ -1,3 +1,6 @@
+SELECT 'CREATE DATABASE dbzbay'
+WHERE NOT EXISTS (SELECT FROM pg_database WHERE datname = 'dbzbay')\gexec;
+
 CREATE TABLE IF NOT EXISTS products (
     ID SERIAL PRIMARY KEY,
     Name TEXT NOT NULL,

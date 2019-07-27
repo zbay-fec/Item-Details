@@ -9,7 +9,7 @@ describe('the /item/:id endpoint', () => {
   // });
 
   test('responds with json', done => {
-    const id;
+    let id;
     if (process.env.env === 'travis'){
       id = 1;
     }else{

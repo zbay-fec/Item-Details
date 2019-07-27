@@ -1,16 +1,17 @@
 language: node_js
+
 node_js: 
   - "stable"
+
 services: 
   docker
+
+env:
+  - DOCKER_COMPOSE_
+
+before_script:
+  - docker-compose up -d
 
 cache:
   directories
   - "node_modules"
-
-env:
-  - DOCKER_COMPOSE_
-  - PGUSER=travis
-  - PGPASSWORD=travis
-  - PGDATABASE=dbzbay
-  - ENV=travis

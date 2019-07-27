@@ -10,7 +10,7 @@ describe('the /item/:id endpoint', () => {
 
   test('responds with json', done => {
     let id;
-    if (process.env.env === 'travis'){
+    if (process.env.ENV === 'travis'){
       id = 1;
     }else{
       id = String(Math.floor(Math.random() * 10000000)).padStart(8, '0');

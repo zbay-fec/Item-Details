@@ -2,16 +2,21 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
 const app = express();
-const {Item} = require('../database/index.js');
+const { Item } = require("../database/index.js");
 const mongoose = require("mongoose");
-const cors = require('cors');
-var compression = require('compression');
-require('dotenv').config();
+const cors = require("cors");
+var compression = require("compression");
+require("dotenv").config();
 
-mongoose.connect(`mongodb+srv://${process.env.mongo_username}:${process.env.password}@zbay-tvguq.mongodb.net/Zbay?retryWrites=true&w=majority`, {useNewUrlParser: true});
+mongoose.connect(
+  `mongodb+srv://${process.env.mongo_username}:${
+    process.env.password
+  }@zbay-tut7w.mongodb.net/Zbay?retryWrites=true&w=majority`,
+  { useNewUrlParser: true }
+);
 
 const port = process.env.PORT || 3002;
-const host = process.env.HOST || '0.0.0.0';
+const host = process.env.HOST || "0.0.0.0";
 
 app.use(express.static("dist"));
 app.use(
@@ -23,9 +28,10 @@ app.use(cors());
 app.use(compression());
 
 app.get("/item/:id", (req, res, next) => {
-  Item.findOne({ID : req.params.id})
+  Item.findOne({ ID: req.params.id })
     .exec()
     .then(doc => {
+      console.log(doc);
       res.send(doc);
     })
     .catch(err => {

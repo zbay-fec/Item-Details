@@ -18,10 +18,6 @@ const itemSchema = mongoose.Schema({
   Category: String
 });
 
-<<<<<<< HEAD
 const Item = mongoose.model("Zbay", itemSchema, "zbay");
-=======
-const Item = mongoose.model('Zbay', itemSchema, "zbay");
->>>>>>> cc8fe94f3b454c86a1a2cd0ec4202e1e6350c25b
 
 module.exports = { Item };

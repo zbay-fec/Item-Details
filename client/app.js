@@ -208,7 +208,6 @@ class ItemDetail extends React.Component {
                   </button>
                 </div>
               </div>
-<<<<<<< HEAD
               <div id="ktable">
                 <div className="ktablecolumn" id="kcol1">
                   <div className="kcenter">100% buyer satisfaction</div>
@@ -290,54 +289,9 @@ class ItemDetail extends React.Component {
                   30 day returns. Buyer pays for return shipping |
                 </span>{" "}
                 <span id="kk">See details</span>
-=======
-              <div className='ktablecolumn' id='col2'>
-                <div className='kcenter'>
-                Free delivery in 2 days
-                </div></div>
-              <div className='ktablecolumn' id='col3'>
-                <div className='kcenter'>
-                More than 95% sold
-                </div></div>
-            </div>
-          </h5>
-          <h5 className='kh2'><div className='kfixed'>Shipping: </div>
-            <div className='ktitlecol' id='kshipping'>
-              <div><span><img id='ktruck' src='https://zbay-food.s3.us-east-2.amazonaws.com/Payment+Types/xmyxg1ubry1npie2zlpan5za3yu.png'></img></span><span id='ka'>FAST 'N FREE</span></div>
-              <div><span id='kb'>Guaranteed by</span><span id='kc'> Wed. Jul. 17 </span> <span id='kd'><a className='ka' onClick={(e) => {e.preventDefault()}} href='/'>| See details</a></span></div>
-              <div id='ke'>Item location: US, United States</div>
-              <div><span id='kf'>Ships to: United States</span><span id='kg'> | <a className='ka' onClick={(e) => {e.preventDefault()}} href='/'>See exclusions</a></span></div>
-            </div>
-          </h5>
-          <h5 className='kh2'><div className='kfixed'>Payments:</div>
-            <div className='ktitlecol' id='kpayments'>
-              <span><img src='https://zbay-food.s3.us-east-2.amazonaws.com/Payment+Types/paypal.png'></img></span>
-              <span><img src='https://zbay-food.s3.us-east-2.amazonaws.com/Payment+Types/credit_cards.png'></img></span>
-              <div><img src='https://zbay-food.s3.us-east-2.amazonaws.com/Payment+Types/logoPaypalCredit_104x16.png'></img></div>
-              <div><span id='kh'>Special financing available.    </span><span id='ki'>Apply Now   |  See terms</span></div>
-            </div>
-          </h5>
-          <h5 className='kh2'><div className='kfixed'>Returns:</div>
-            <div className='ktitlecol'>
-              <span id='kj'>30 day returns. Buyer pays for return shipping |</span> <span id='kk'>See details</span>
-            </div>
-          </h5>
-        </div>
-        <div id='seller'>
-          <div id='ksellconfidence'>
-            <h2 className='kh2'>Shop with confidence</h2>
-            <div id='ktable2'>
-              <div className='kmoneypic' id='kmoneypic'>
-                <img className='kmoneypic' src='https://zbay-food.s3.us-east-2.amazonaws.com/Payment+Types/Screen+Shot+2019-07-13+at+8.34.01+PM.png'></img>
-              </div>
-              <div id='ksidemoney'>
-                <h6 className='kh6'>ZBay Money Back Guarantee</h6>
-                <p id='klearnmore'>Get the item you ordered or get your money back. <a className='ka' onClick={(e) => {e.preventDefault()}} href='/'>Learn more</a></p>
->>>>>>> cc8fe94f3b454c86a1a2cd0ec4202e1e6350c25b
               </div>
             </h5>
           </div>
-<<<<<<< HEAD
           <div id="seller">
             <div id="ksellconfidence">
               <h2 className="kh2">Shop with confidence</h2>
@@ -435,16 +389,6 @@ class ItemDetail extends React.Component {
                 </a>
               </p>
             </div>
-=======
-          <div id='ksellinfo'>
-            <h2 className='kh2' id='ksellerinfotitle'>Seller Information</h2>
-            <h6 className='kh6' id='ksellername'><a className='ka' onClick={(e) => {e.preventDefault()}} href='/'>{this.state.item.data['Seller Name']}</a> (<a className='ka' onClick={(e) => {e.preventDefault()}} href='/'>{this.state.item.data['Seller Score']}</a>)</h6>
-            <h6 className='kh6' id='ksellerpercent'>{this.state.item.data['Seller Feedback']}% Positive Feedback</h6>
-              <p className='ksellinfolinks'><a className='ka' onClick={(e) => {e.preventDefault()}} href='/'><i id='kheart2' className="material-icons">favorite_border</i>Save this Seller</a></p>
-              <p className='ksellinfolinks'><a className='ka' onClick={(e) => {e.preventDefault()}} href='/'>Contact seller</a></p>
-              <p className='ksellinfolinks'><a className='ka' onClick={(e) => {e.preventDefault()}} href='/'>Visit store</a></p>
-              <p className='ksellinfolinks'><a className='ka' onClick={(e) => {e.preventDefault()}} href='/'>See other items</a></p>
->>>>>>> cc8fe94f3b454c86a1a2cd0ec4202e1e6350c25b
           </div>
         </div>
       );

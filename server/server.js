@@ -8,7 +8,12 @@ const cors = require('cors');
 var compression = require('compression');
 require('dotenv').config();
 
-mongoose.connect(`mongodb+srv://${process.env.mongo_username}:${process.env.password}@zbay-tvguq.mongodb.net/Zbay?retryWrites=true&w=majority`, {useNewUrlParser: true});
+mongoose.connect(
+  `mongodb+srv://${process.env.mongo_username}:${
+    process.env.password
+  }@zbay-tut7w.mongodb.net/Zbay?retryWrites=true&w=majority`,
+  { useNewUrlParser: true }
+);
 
 const port = process.env.PORT || 3002;
 const host = process.env.HOST || '0.0.0.0';

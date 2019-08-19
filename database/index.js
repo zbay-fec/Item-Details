@@ -18,6 +18,6 @@ const itemSchema = mongoose.Schema({
   'Category': String,
 });
 
-const Item = mongoose.model('Item', itemSchema);
+const Item = mongoose.model('Zbay', itemSchema, "zbay");
 
 module.exports = {Item};

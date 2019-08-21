@@ -13,20 +13,9 @@
 ## Challenges
    * First Deployed Web application.
    * Using MongoDB for the first time. Learned how to query and interact with the database with Mongoose.
-   * What did you learn?
-* Challenges that were unexpected
-    * Why was it a challenge
-    * What did you learn?
  ![Component Screenshot](https://kbench09git.s3.us-east-2.amazonaws.com/Screen+Shot+2019-07-19+at+4.15.24+PM.png)
-* Video Demo / Screen shot walkthrough of the app 
-    * What were the user stories /  what was MVP (mention Minimal Viable Product)
-* How does the app work?
-    * What happens behind the scenes when the user interacts with it? 
-    * OR What are all the place the data travels?  What happens to that data?
-    * Optionally include a diagram
-    * How does the tech stack come together?
-* What research was required? 
-* What additional features do you plan to add, how do you plan to implement those features?
-    * Future refactoring?
-    * Additional dev ops considerations?
-    * UI/UX additions?
+## How it works
+    * This app works as one component out of five that combine to create a SOA. Event handlers pass data between each of the    components to handle changes.
+    * Multiple item details are pulled in to render different details based on user selection.  
+## Future plans
+    * I would like to refactor this to use React Hooks, build out other pages such as a home page, and the ability to add   remove items
